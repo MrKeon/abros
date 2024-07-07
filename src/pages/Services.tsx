@@ -1,64 +1,11 @@
 import { Box, Grid, Typography, Backdrop, Fade, IconButton, Modal } from "@mui/material"
 import CloseIcon from '@mui/icons-material/Close';
 import React, { useState } from "react"
-import deck1 from "../images/deck1.jpg"
-import deck2 from "../images/deck2.jpg"
-import deck3 from "../images/deck3.jpg"
-import remodel1 from "../images/remodel1.jpg"
-import remodel2 from "../images/remodel2.jpg"
-import remodel3 from "../images/remodel3.jpg"
-import tile1 from "../images/tile1.jpg"
 import ImageCarousel from "../components/ImageCarousel"
+import { services } from "../util/util";
 
 
 const headerSize = "h2"
-
-const deckImgList = [
-    {
-        src: deck1,
-        alt: 'Weatherproof immitation wood deck with lighting and masonry work.'
-    },
-    {
-        src: deck2,
-        alt: 'Beachfront wooden deck with railings.'
-    },
-    {
-        src: deck3,
-        alt: 'Weatherproof immitation wood deck with railings.'
-    },
-]
-const services = [
-    {
-        title: 'Decking',
-        images: [...deckImgList]
-    },
-    {
-        title: 'Remodel',
-        images: [
-            {
-                src: remodel1,
-                alt: '',
-            },
-            {
-                src: remodel2,
-                alt: '',
-            },
-            {
-                src: remodel3,
-                alt: '',
-            }
-        ]
-    },
-    {
-        title: 'Tile/Flooring',
-        images: [
-            {
-                src: tile1,
-                alt: '',
-            }
-        ]
-    }
-]
 
 export const Services = () => {
     const [open, setOpen] = useState(false);
