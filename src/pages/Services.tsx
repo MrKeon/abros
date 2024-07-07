@@ -30,15 +30,20 @@ export const Services = () => {
                         <Typography variant="h6" gutterBottom textAlign="center">
                             {service.title}
                         </Typography>
-                            <Box textAlign="center">
-                                <img
-                                    src={service.images[0].src}
-                                    alt={service.images[0].alt}
-                                    style={{ width: '100%', cursor: 'pointer' }}
-                                    onClick={() => handleOpen(service.images, 0)}
-                                />
-                                <Typography variant="subtitle1">{service.images[0].alt}</Typography>
-                            </Box>
+                        <Box textAlign="center">
+                            <img
+                                src={service.images[0].src}
+                                alt={service.images[0].alt}
+                                style={{
+                                    width: '100%',
+                                    height: '200px',  // Set a fixed height for the images
+                                    objectFit: 'cover',  // Maintain aspect ratio and cover the area
+                                    cursor: 'pointer',
+                                }}
+                                onClick={() => handleOpen(service.images, 0)}
+                            />
+                            <Typography variant="subtitle1">{service.images[0].alt}</Typography>
+                        </Box>
                     </Grid>
                 ))}
             </Grid>
