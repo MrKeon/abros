@@ -35,7 +35,7 @@ function App() {
           <Tabs value={tab} onChange={handleChange}>
             <Tab label="AchaemenidBrothers" />
             <Tab label="Services" />
-            <Tab label="About" />
+            {/* <Tab label="About" /> */}
             <Tab label="Contact" />
           </Tabs>
           <Typography sx={{ ml: 'auto', p: 2 }}>
@@ -44,8 +44,8 @@ function App() {
         </Box>
         <CustomTabPanel value={tab} index={0}><Home /></CustomTabPanel>
         <CustomTabPanel value={tab} index={1}><Services /></CustomTabPanel>
-        <CustomTabPanel value={tab} index={2}><About /></CustomTabPanel>
-        <CustomTabPanel value={tab} index={3}><Contact /></CustomTabPanel>
+        {/* <CustomTabPanel value={tab} index={2}><About /></CustomTabPanel> */}
+        <CustomTabPanel value={tab} index={2}><Contact /></CustomTabPanel>
       </Container>
     </CssBaseline>
   );
