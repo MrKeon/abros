@@ -2,9 +2,9 @@ import './App.css';
 import { Box, Container, CssBaseline, Tab, Tabs } from '@mui/material';
 import React, { SyntheticEvent } from 'react';
 import { Services } from './pages/Services';
-import { Home } from '@mui/icons-material';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { Home } from './pages/Home';
 
 function CustomTabPanel(props: { [x: string]: any; children: any; value: any; index: any; }) {
   const { children, value, index, ...other } = props;
@@ -36,7 +36,7 @@ function App() {
       <Box sx={{ width: '100%'}}>
         <Box sx={{ alignItems: 'center' }}>
           <Tabs value={tab} onChange={handleChange} centered>
-            <Tab label="Home" />
+            <Tab label="AchaemenidBrothers" />
             <Tab label="Services" />
             <Tab label="About" />
             <Tab label="Contact" />
