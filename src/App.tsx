@@ -1,5 +1,5 @@
 import './App.css';
-import { Box, Container, CssBaseline, Tab, Tabs, Typography } from '@mui/material';
+import { Box, Container, CssBaseline, Link, Tab, Tabs, Typography } from '@mui/material';
 import React, { SyntheticEvent } from 'react';
 import { Services } from './pages/Services';
 import { About } from './pages/About';
@@ -39,7 +39,9 @@ function App() {
             <Tab label="Contact" />
           </Tabs>
           <Typography sx={{ ml: 'auto', p: 2 }}>
-            CALL US: 123-456-7890
+            <Link href="tel:123-456-7890" color="inherit" underline="none">
+              CALL US: 123-456-7890
+            </Link>
           </Typography>
         </Box>
         <CustomTabPanel value={tab} index={0}><Home /></CustomTabPanel>
