@@ -1,5 +1,5 @@
 import './App.css';
-import { Box, Container, CssBaseline, Link, Tab, Tabs, Typography } from '@mui/material';
+import { Box, Container, CssBaseline, Hidden, Link, Tab, Tabs, Typography } from '@mui/material';
 import React, { SyntheticEvent } from 'react';
 import { Services } from './pages/Services';
 import { About } from './pages/About';
@@ -33,15 +33,29 @@ function App() {
     <CssBaseline>
       <Container>
         <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Tabs value={tab} onChange={handleChange} sx={{ flexGrow: 1 }} variant="scrollable">
+          <Tabs
+            value={tab}
+            onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="auto"
+            sx={{ flexGrow: 1 }}
+          >
             <Tab label="AchaemenidBrothers" />
             <Tab label="Services" />
             {/* <Tab label="About" /> */}
             <Tab label="Contact" />
           </Tabs>
-          <Typography sx={{ ml: 'auto', p: 2 }}>
+          <Typography sx={{ p: 2, textAlign: 'right' }}>
+            <Box
+              component="span"
+              sx={{
+                display: { xs: 'none', sm: 'inline' },
+              }}
+            >
+              {`CALL US: `}
+            </Box>
             <Link href={`tel:${businessPhone}`} color="inherit" underline="none">
-              CALL US: {businessPhone}
+              {businessPhone}
             </Link>
           </Typography>
         </Box>
