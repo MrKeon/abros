@@ -11,13 +11,25 @@ const Contact: React.FC = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const mailtoLink = `mailto:${businessEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        const mailtoLink = `mailto:${businessEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${tel}\n\nMessage:\n${message}`)}`;
         window.location.href = mailtoLink;
     };
 
     return (
-        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Typography variant="h6" gutterBottom>
+        <Box
+            component="form"
+            onSubmit={handleSubmit}
+            sx={{
+                mt: 3,
+                maxWidth: '600px',
+                mx: 'auto',
+                p: { xs: 2, sm: 3 },
+                boxShadow: { xs: 1, sm: 3 },
+                borderRadius: 2,
+                bgcolor: 'background.paper',
+            }}
+        >
+            <Typography variant="h6" gutterBottom textAlign="center">
                 Contact Us
             </Typography>
             <TextField
@@ -27,6 +39,7 @@ const Contact: React.FC = () => {
                 fullWidth
                 required
                 margin="normal"
+                variant="outlined"
             />
             <TextField
                 label="Your Email"
@@ -36,6 +49,7 @@ const Contact: React.FC = () => {
                 fullWidth
                 required
                 margin="normal"
+                variant="outlined"
             />
             <TextField
                 label="Your Phone Number"
@@ -44,6 +58,7 @@ const Contact: React.FC = () => {
                 onChange={(e) => setTel(e.target.value)}
                 fullWidth
                 margin="normal"
+                variant="outlined"
             />
             <TextField
                 label="Subject"
@@ -52,6 +67,7 @@ const Contact: React.FC = () => {
                 fullWidth
                 required
                 margin="normal"
+                variant="outlined"
             />
             <TextField
                 label="Message"
@@ -62,8 +78,14 @@ const Contact: React.FC = () => {
                 multiline
                 rows={4}
                 margin="normal"
+                variant="outlined"
             />
-            <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }}>
+            <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                sx={{ mt: 2, width: '100%' }}
+            >
                 Send
             </Button>
         </Box>

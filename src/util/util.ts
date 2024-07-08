@@ -6,7 +6,8 @@ import remodel2 from "../images/remodel2.jpg"
 import remodel3 from "../images/remodel3.jpg"
 import tile1 from "../images/tile1.jpg"
 
-export const businessEmail = `your-email@example.com`
+export const businessEmail = `khashayar.fpio@gmail.com`
+export const businessPhone = `425-628-3767`
 export const services = [
     {
         title: 'Decking',

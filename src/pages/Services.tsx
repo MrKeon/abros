@@ -36,7 +36,8 @@ export const Services = () => {
                                 alt={service.images[0].alt}
                                 style={{
                                     width: '100%',
-                                    height: '200px',  // Set a fixed height for the images
+                                    height: 'auto', // Adjust height automatically
+                                    maxHeight: '200px',  // Maximum height for images
                                     objectFit: 'cover',  // Maintain aspect ratio and cover the area
                                     cursor: 'pointer',
                                 }}
@@ -55,8 +56,8 @@ export const Services = () => {
                 <Box
                     sx={{
                         position: 'relative',
-                        width: '80vw',
-                        height: '80vh',
+                        width: { xs: '90vw', sm: '80vw' }, // Responsive width
+                        height: { xs: '90vh', sm: '80vh' }, // Responsive height
                         bgcolor: 'background.paper',
                         boxShadow: 24,
                         p: 4,
