@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Backdrop, Fade, IconButton, Modal } from "@mui/material"
+import { Box, Grid, Typography, IconButton, Modal } from "@mui/material"
 import CloseIcon from '@mui/icons-material/Close';
 import React, { useState } from "react"
 import ImageCarousel from "../components/ImageCarousel"
